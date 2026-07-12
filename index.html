@@ -4,81 +4,192 @@
 <head>
 
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Xueqin Peng</title>
 
 
 <style>
 
-body{
-font-family: Arial, Helvetica, sans-serif;
-max-width:1000px;
-margin:auto;
-padding:40px;
-line-height:1.7;
-color:#333;
+body {
+
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    max-width: 1050px;
+    margin: auto;
+    padding: 50px;
+    line-height: 1.8;
+    color: #333;
+
 }
 
+
+/* navigation */
+
+nav {
+
+    text-align: right;
+    margin-bottom: 50px;
+
+}
+
+
+nav a {
+
+    margin-left: 25px;
+    color: #174a7e;
+    text-decoration: none;
+    font-size: 16px;
+
+}
+
+
+nav a:hover {
+
+    text-decoration: underline;
+
+}
+
+
+
+/* header */
+
+
+.header {
+
+    display: flex;
+    align-items: flex-start;
+    gap: 90px;
+    margin-bottom: 70px;
+
+}
+
+
+
+.photo {
+
+    width: 190px;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 8px;
+
+}
+
+
+
+.name {
+
+    font-size: 42px;
+    font-weight: 500;
+    color: #163a5f;
+    margin-top: 10px;
+
+}
+
+
+.position {
+
+    font-size: 20px;
+    color: #555;
+
+}
+
+
+.links a {
+
+    color:#0066cc;
+    text-decoration:none;
+
+}
+
+
+
+/* sections */
+
+
+h2 {
+
+    margin-top: 50px;
+    color:#163a5f;
+    font-weight:500;
+    border-bottom:1px solid #ddd;
+    padding-bottom:8px;
+
+}
+
+
+
+li {
+
+    margin-bottom:10px;
+
+}
+
+
+
+.paper {
+
+    margin-bottom:20px;
+
+}
+
+
+
+/* mobile */
+
+
+@media(max-width:700px){
 
 .header{
-display:flex;
-align-items:center;
-gap:40px;
+
+    flex-direction:column;
+    gap:30px;
+
 }
 
 
-.photo{
-width:180px;
-height:180px;
-object-fit:cover;
-border-radius:50%;
+nav{
+
+    text-align:center;
+
 }
 
 
-h1{
-font-size:40px;
-margin-bottom:5px;
+body{
+
+    padding:25px;
+
 }
 
 
-.subtitle{
-font-size:20px;
-color:#555;
 }
 
-
-h2{
-margin-top:45px;
-border-bottom:2px solid #ddd;
-padding-bottom:8px;
-color:#12355b;
-}
-
-
-a{
-color:#0056b3;
-text-decoration:none;
-}
-
-
-a:hover{
-text-decoration:underline;
-}
-
-
-li{
-margin:8px 0;
-}
 
 
 </style>
-
 
 </head>
 
 
 
 <body>
+
+
+
+<nav>
+
+<a href="#about">About</a>
+
+<a href="#research">Research</a>
+
+<a href="#publications">Publications</a>
+
+<a href="#cv">CV</a>
+
+<a href="#contact">Contact</a>
+
+</nav>
+
+
 
 
 
@@ -91,12 +202,15 @@ class="photo">
 
 <div>
 
-<h1>
+
+<div class="name">
+
 Xueqin Peng
-</h1>
+
+</div>
 
 
-<p class="subtitle">
+<p class="position">
 
 Postdoctoral Researcher<br>
 
@@ -107,26 +221,27 @@ University of Innsbruck, Austria
 </p>
 
 
+
 <p>
-Email: your.email@uibk.ac.at
+
+Email:
+your.email@uibk.ac.at
+
 </p>
 
 
-<p>
 
-<a href="#">
-Google Scholar
-</a>
-&nbsp; | &nbsp;
+<p class="links">
 
-<a href="#">
-ORCID
-</a>
-&nbsp; | &nbsp;
+<a href="#">Google Scholar</a>
+&nbsp; |
+&nbsp;
 
-<a href="#">
-GitHub
-</a>
+<a href="#">ORCID</a>
+&nbsp; |
+&nbsp;
+
+<a href="#">GitHub</a>
 
 
 </p>
@@ -141,25 +256,27 @@ GitHub
 
 
 
-<h2>
+
+
+<h2 id="about">
+
 About Me
+
 </h2>
 
 
 <p>
 
-I am currently a Postdoctoral Researcher at the
-University of Innsbruck.
+I am currently a Postdoctoral Researcher at the University of Innsbruck.
 
-My research interests lie in nonlinear analysis
-and partial differential equations.
+My research interests lie in nonlinear analysis and partial differential equations.
 
 </p>
 
 
 <p>
 
-My current research focuses on nonlinear Schrödinger equations,
+In particular, I work on nonlinear Schrödinger equations,
 Schrödinger-Poisson systems, normalized solutions,
 variational methods and asymptotic analysis.
 
@@ -169,8 +286,11 @@ variational methods and asymptotic analysis.
 
 
 
-<h2>
+
+<h2 id="research">
+
 Research Interests
+
 </h2>
 
 
@@ -205,14 +325,18 @@ Variational Methods
 Critical Point Theory
 </li>
 
+
 </ul>
 
 
 
 
 
+
 <h2>
-Employment
+
+Academic Experience
+
 </h2>
 
 
@@ -222,9 +346,7 @@ Employment
 
 <strong>
 Postdoctoral Researcher
-</strong>
-
-<br>
+</strong><br>
 
 University of Innsbruck, Austria
 
@@ -235,40 +357,11 @@ University of Innsbruck, Austria
 </li>
 
 
-</ul>
-
-
-
-
-
-<h2>
-Education
-</h2>
-
-
-<ul>
-
-
 <li>
 
 <strong>
-Ph.D. in Mathematics
-</strong>
-
-<br>
-
-Research area:
-Nonlinear Analysis and Partial Differential Equations
-
-</li>
-
-
-
-<li>
-
 Visiting Ph.D. Student
-
-<br>
+</strong><br>
 
 Justus Liebig University Giessen, Germany
 
@@ -281,44 +374,80 @@ Justus Liebig University Giessen, Germany
 
 
 
+
+
 <h2>
-Publications
+
+Education
+
 </h2>
 
 
-<ol>
+<ul>
 
 
 <li>
 
-Author,
-"Title of paper",
+<strong>
 
-Journal name,
-Year.
+Ph.D. in Mathematics
 
-</li>
+</strong>
 
+<br>
 
-<li>
-
-Author,
-"Title of paper",
-
-Journal name,
-Year.
+Research area:
+Nonlinear Analysis and Partial Differential Equations
 
 </li>
 
 
-</ol>
+</ul>
+
+
+
+
+
+
+
+<h2 id="publications">
+
+Publications
+
+</h2>
+
+
+
+<div class="paper">
+
+1.
+Xueqin Peng,
+"Title of the paper",
+<i>Journal Name</i>, Year.
+
+</div>
+
+
+
+<div class="paper">
+
+2.
+Xueqin Peng,
+"Title of the paper",
+<i>Journal Name</i>, Year.
+
+</div>
+
+
 
 
 
 
 
 <h2>
+
 Preprints
+
 </h2>
 
 
@@ -330,22 +459,26 @@ Title of preprint
 
 </li>
 
-
 </ul>
 
 
 
 
 
-<h2>
+
+<h2 id="cv">
+
 CV
+
 </h2>
 
 
 <p>
 
 <a href="CV.pdf">
-Download CV
+
+Download my CV (PDF)
+
 </a>
 
 </p>
@@ -354,8 +487,11 @@ Download CV
 
 
 
-<h2>
+
+<h2 id="contact">
+
 Contact
+
 </h2>
 
 
